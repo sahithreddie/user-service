@@ -96,7 +96,7 @@ public class UserVerticle extends AbstractVerticle {
         router.delete("/users/:id").handler(ctx -> {
             Long id = parseId(ctx.pathParam("id"));
             if (id == null) {
-                sendError(ctx, 400, "id must be a number");
+                sendError(ctx, 400, "id required");
                 return;
             }
 
