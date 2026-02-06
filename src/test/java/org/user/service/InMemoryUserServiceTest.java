@@ -18,15 +18,15 @@ class InMemoryUserServiceTest {
 
     @Test
     void createUserSuccess() throws Exception {
-        User user = new User(1L, "Alice", "alice@test.com");
+        User user = new User(1L, "Alex", "alex@test.com");
         User created = service.createUser(user);
 
         assertNotNull(created);
         assertEquals(1L, created.getId());
-        assertEquals("Alice", created.getName());
-        assertEquals("alice@test.com", created.getEmail());
+        assertEquals("Alex", created.getName());
+        assertEquals("alex@test.com", created.getEmail());
         User fetched = service.getUserById(1L);
-        assertEquals("Alice", fetched.getName());
+        assertEquals("Alex", fetched.getName());
     }
 
 
